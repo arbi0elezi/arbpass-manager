@@ -4,7 +4,7 @@
   "description": "",
   "main": "root.js",
   "scripts": {
-    "build": "babel -d ./build ./root.js -s",
+    "build": "babel ./src --out-dir build",
     "start": "npm run build && node build/root.js",
     "test": "test"
   },
@@ -28,6 +28,13 @@
     "@babel/runtime": "^7.15.4"
   },
   "dependencies": {
-    "http": "0.0.1-security"
+    "fastify": "^3.21.0",
+    "nodemon": "^2.0.12",
+    "rimraf": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }

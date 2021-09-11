@@ -1,0 +1,33 @@
+{
+  "name": "arbpass-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "root.js",
+  "scripts": {
+    "build": "babel -d ./build ./root.js -s",
+    "start": "npm run build && node build/root.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbi0elezi/arbpass-manager.git"
+  },
+  "author": "arbi elezi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arbi0elezi/arbpass-manager/issues"
+  },
+  "homepage": "https://github.com/arbi0elezi/arbpass-manager#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/runtime": "^7.15.4"
+  },
+  "dependencies": {
+    "http": "0.0.1-security"
+  }
+}

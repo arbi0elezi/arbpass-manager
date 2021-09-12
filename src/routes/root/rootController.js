@@ -9,13 +9,15 @@ export default {
             type: 'object',
             properties: {
                 home: {
-                    type: 'string'
+                    type: 'number'
                 }
             }
         }
     },
     preHandler: async (req, res) => {},
     handler: async (req, res) => {
-        return {home: 'Home Controller'}
+        debugger
+        let x = 25;
+        return {home: 'Home Controller' + x}
     }
 };

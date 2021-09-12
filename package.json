@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel ./src --out-dir build",
     "start": "npm run build && node build/root.js",
+    "start:debug": "nodemon --inspect --watch src --exec node_modules/.bin/babel-node --presets @babel/preset-env src/root.js",
     "test": "test"
   },
   "repository": {
@@ -18,15 +19,6 @@
     "url": "https://github.com/arbi0elezi/arbpass-manager/issues"
   },
   "homepage": "https://github.com/arbi0elezi/arbpass-manager#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.15.4",
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/runtime": "^7.15.4"
-  },
   "dependencies": {
     "fastify": "^3.21.0",
     "nodemon": "^2.0.12",
@@ -36,5 +28,14 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/runtime": "^7.15.4"
   }
 }
